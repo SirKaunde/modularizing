@@ -4,13 +4,16 @@ library(sf)
 library(ggplot2)
 library(tmap)
 
+source("mod_ui.R")
+source("mod_server.R")
+
 shinyUI( 
 fluidPage(
   titlePanel("Modularizing Shiny App"),
   
     mainPanel(
-      plotOutput("Soil_box"),
-      plotOutput("Soil_Map")
+      plotUI("box"),
+      plotUI("map")
       )
     )
 )
